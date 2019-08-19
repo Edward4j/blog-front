@@ -1,0 +1,17 @@
+<h2>This is my lovely articles</h2>
+
+{{#each model as |article|}}
+  <div class="listing">
+    <h3>{{article.title}}</h3>
+    <div class="detail owner">
+      <span>Author:</span> {{article.author}}
+    </div>
+    <div class="detail type">
+      <span>Price:</span> {{article.price}}
+    </div>
+    <div class="detail location">
+      <span>ISBN:</span> {{article.isbn}}
+    </div>
+  </div>
+{{/each}}
+{{outlet}}
