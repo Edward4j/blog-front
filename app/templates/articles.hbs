@@ -1,4 +1,7 @@
-<h2>This is my lovely articles</h2>
+<h1>This is my lovely articles</h1>
+
+<h1>Current page: {{ model.meta.pagination.self.number }}</h1>
+<h2>Last page: {{ this.model.meta.pagination.last.number }}!</h2>
 
 {{#each this.model as |article|}}
   <div class="listing">
@@ -14,4 +17,17 @@
     </div>
   </div>
 {{/each}}
-{{outlet}}
+<br><br>
+{{#each-in this.model.meta.pagination as |key value|}}
+  <LinkTo @route="articles" @query={{hash page=value.number}} class="custom-link">{{key}}</LinkTo>
+{{/each-in}}
+
+<br>
+
+{{#each this.count as |number|}}
+  {{#if (eq number this.model.meta.pagination.self.number) }}
+    {{ number }}
+  {{else}}
+    <LinkTo @route="articles" @query={{hash page=number}} class="custom-link">{{number}}</LinkTo>
+  {{/if}}
+{{/each}}

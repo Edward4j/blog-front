@@ -29,6 +29,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.APP.host = "https://bookstore-back.herokuapp.com/"
   }
 
   if (environment === 'test') {
@@ -45,6 +46,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
+    ENV.host = "https://bookstore-back.herokuapp.com/"
   }
 
   return ENV;

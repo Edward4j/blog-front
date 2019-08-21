@@ -69,3 +69,32 @@ a.author {
   filter: blur(3px);
   -webkit-filter: blur(3px);
 }
+
+.custom-link {
+  outline: none;
+  text-decoration: none;
+  padding: 2px 1px 0;
+}
+
+.custom-link:link {
+  color: #140153;
+}
+
+.custom-link:visited {
+  color: #51037a;
+}
+
+.custom-link:focus {
+  border-bottom: 1px solid;
+  background: #a593e4;
+}
+
+.custom-link:hover {
+  border-bottom: 1px solid;
+  background: #c6c2fe;
+}
+
+.custom-link:active {
+  background: #200053;
+  color: #c6c2fe;
+}
