@@ -21,5 +21,12 @@ export default Route.extend({
 
     // return this.get('store').findAll('article');
     //return this.store.findAll('article');
+  },
+
+  actions: {
+    delete(article) {
+      article.deleteRecord();
+      article.save();
+    }
   }
 });

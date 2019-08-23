@@ -1,0 +1,12 @@
+{{#link-to 'articles' class="custom-link"}}Back to the Articles list{{/link-to}}
+
+<h3>Article #{{model.id}} Show</h3>
+
+<h2>Title: {{model.title}}</h2>
+<p>Author: {{model.author}}</p>
+<p>ISBN: {{model.isbn}}</p>
+<p>Price: ${{model.price}}</p>
+
+<br><br>
+
+{{#link-to 'article.new' class="custom-link"}}Add new Article{{/link-to}}

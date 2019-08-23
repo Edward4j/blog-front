@@ -5,7 +5,9 @@
 
 {{#each this.model as |article|}}
   <div class="listing">
-    <h3>{{article.title}}</h3>
+    {{#link-to "articles.show" article class="custom-link" }}
+      {{article.title}}
+    {{/link-to}}
     <div class="detail owner">
       <span>Author:</span> {{article.author}}
     </div>
@@ -15,9 +17,18 @@
     <div class="detail location">
       <span>ISBN:</span> {{article.isbn}}
     </div>
+
+    <button {{action "delete" article}}>Delete</button>
+
   </div>
 {{/each}}
 <br><br>
+
+{{#link-to "article.new" class="custom-link"}}New Article{{/link-to}}
+
+<br><br>
+
+
 {{#each-in this.model.meta.pagination as |key value|}}
   <LinkTo @route="articles" @query={{hash page=value.number}} class="custom-link">{{key}}</LinkTo>
 {{/each-in}}
