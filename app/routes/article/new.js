@@ -18,6 +18,9 @@ export default Route.extend({
       var title = this.controller.title;
       if (!title.trim()) { return; }
 
+      var body = this.controller.body;
+      if (!body.trim()) { return; }
+
       //var isbn = this.get('isbn');
       var isbn = this.controller.isbn;
       if (!title.trim()) { return; }
@@ -32,6 +35,7 @@ export default Route.extend({
       var newArticle = this.store.createRecord('article', {
         author: author,
         title: title,
+        body: body,
         isbn: isbn,
         price: price
       });
@@ -39,6 +43,7 @@ export default Route.extend({
       // Clear the "New Article" text field
       this.set('controller.author', '');
       this.set('controller.title', '');
+      this.set('controller.body', '');
       this.set('controller.isbn', '');
       this.set('controller.price', '');
 

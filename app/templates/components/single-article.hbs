@@ -1,0 +1,14 @@
+<h3>
+  <button {{action "toggleBody"}}>
+    {{#if this.isShowingBody}}
+      Hide
+    {{else}}
+      Show
+    {{/if}}
+    body of {{this.article.title}}
+  </button>
+</h3>
+
+{{#if this.isShowingBody}}
+  <p>Body: {{this.article.body}}</p>
+{{/if}}
