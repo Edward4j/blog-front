@@ -5,10 +5,11 @@
     {{else}}
       Show
     {{/if}}
-    body of {{this.article.title}}
+    body of {{this.title}}
   </button>
 </h3>
 
 {{#if this.isShowingBody}}
-  <p>Body: {{this.article.body}}</p>
+  <hr class="hr-body">
+  <p>Body: {{this.body}}</p>
 {{/if}}

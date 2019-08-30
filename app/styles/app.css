@@ -99,3 +99,8 @@ a.author {
   background: #200053;
   color: #c6c2fe;
 }
+
+.hr-body {
+  position: relative;
+  top: -60px;
+}

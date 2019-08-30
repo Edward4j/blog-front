@@ -6,8 +6,9 @@
 
 <p>Author: {{model.author}}</p>
 <p>ISBN: {{model.isbn}}</p>
-<p>Price: ${{model.price}}</p>
-<p>{{single-article article=model}}</p>
+<p>Price: {{format-currency model.price sign="$"}}</p>
+<!--<p>{{!single-article article=model}}</p>-->
+<p><SingleArticle @title={{model.title}} @body={{model.body}} @isShowingBody={{model.isShowingBody}}/></p>
 
 <br><br>
 
