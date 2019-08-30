@@ -1,6 +1,7 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
+  templateName: 'articles/show',
 
   model(params) {
     console.dir(params, { color: true });

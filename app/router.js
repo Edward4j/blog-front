@@ -24,6 +24,10 @@ Router.map(function() {
   */
 
   this.route('article.new', { path: 'articles/new' });
+
+  this.route('greetings');
+
+  this.route('not-found', { path: '/*path' });
 });
 
 export default Router;

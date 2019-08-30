@@ -7,8 +7,17 @@
 <p>Author: {{model.author}}</p>
 <p>ISBN: {{model.isbn}}</p>
 <p>Price: {{format-currency model.price sign="$"}}</p>
-<!--<p>{{!single-article article=model}}</p>-->
-<p><SingleArticle @title={{model.title}} @body={{model.body}} @isShowingBody={{model.isShowingBody}}/></p>
+
+{{#if this.isExpanded}}
+  <br><br>
+  <button {{action "toggleBody"}}>Hide Body</button>
+  <hr class="hr-body">
+  <div class="body">
+    {{model.body}}
+  </div>
+{{else}}
+  <button {{action "toggleBody"}}>Show Body</button>
+{{/if}}
 
 <br><br>
 

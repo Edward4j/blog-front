@@ -49,7 +49,7 @@ export default Route.extend({
 
       // Save the new model
       newArticle.save().then((article) => {
-        this.transitionTo('articles.show', article);
+        this.transitionTo('articles/show', article);
       });
 
       //const newArticle = this.store.createRecord('article', this.currentModel);

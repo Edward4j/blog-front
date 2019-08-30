@@ -1,0 +1,15 @@
+<h1>BookStore</h1>
+
+<ul>
+  {{#each this.model.articles as |article|}}
+    <li>{{article.title}} by {{article.author}}</li>
+  {{/each}}
+</ul>
+
+<h1>Books</h1>
+
+<ul>
+  {{#each this.model.books as |book|}}
+    <li>{{book.title}} by {{book.author.name}}</li>
+  {{/each}}
+</ul>
