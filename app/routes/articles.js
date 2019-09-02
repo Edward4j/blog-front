@@ -24,6 +24,9 @@ export default Route.extend({
   },
 
   actions: {
+    edit(article) {
+      this.transitionTo('articles.edit', article);
+    },
     delete(article) {
       article.deleteRecord();
       article.save();

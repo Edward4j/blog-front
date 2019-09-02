@@ -23,7 +23,7 @@ export default Route.extend({
 
       //var isbn = this.get('isbn');
       var isbn = this.controller.isbn;
-      if (!title.trim()) { return; }
+      if (!isbn.trim()) { return; }
       //validate(isbn, { integer: true, positive: true });
 
       //var price = this.get('price');

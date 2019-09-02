@@ -1,0 +1,61 @@
+<h1>Edit article #{{this.model.id}}</h1>
+
+<div class="article-form">
+
+  <label for="edit-author">Author:</label>
+
+  {{input
+    type="text"
+    id="edit-author"
+    value=this.model.author
+  }}
+
+  <br><br>
+
+  <label for="edit-title">Title:</label>
+
+  {{input
+    type="text"
+    id="edit-title"
+    value=this.model.title
+  }}
+
+  <br><br>
+
+  <label for="edit-body">Body:</label>
+
+  {{textarea
+    cols="80"
+    rows="6"
+    id="edit-body"
+    value=this.model.body
+  }}
+
+  <br><br>
+
+  <label for="edit-isbn">ISBN:</label>
+
+  {{input
+    type="number"
+    id="edit-isbn"
+    value=this.model.isbn
+  }}
+
+  <br><br>
+
+  <label for="edit-price">Price $:</label>
+
+  {{input
+    type="number"
+    id="edit-price"
+    value=this.model.price
+  }}
+
+  <br><br>
+
+  <div>
+    <button class="button-indent" {{action "update" this.model}}>Update Article</button>
+    <button class="button-indent" {{action "cancel" this.model}}>Cancel</button>
+  </div>
+
+</div>
